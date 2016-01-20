@@ -10,10 +10,19 @@ var pigLatin = function(str) {
      str = str.replace("squ", '');
      return str = str + "squay";
    }
-   
- }
+    else {
+      str = str.split("")
+      while (str[0].match(/[b-df-hj-np-tv-z]/)) {
+        str.push(str[0])
+        str.shift(str[0])
+      }
+      str = str.join("");
+      str = str + "ay"
+      return str
+    };
+ };
 
 
 
-
+   //
   //  str = str.replace(/[.,!?:;'"-]+/g, '');
