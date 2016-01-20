@@ -1,14 +1,22 @@
-var pigLatin = function(str) {
+var pigLatin = function(word) {
+  var array = word.split(" ");
+  var finalArray = [];
+  array.forEach(function(str) {
+
    if (str[0].match(/[aeiou]/)) {
-     return str = str + "ay";
-   } else if (str.substr(0,2) === "qu") {
+     str = str + "ay";
+   }
+
+   else if (str.substr(0,2) === "qu") {
      str = str.replace("qu", '');
-     return str = str + "quay";
+     str = str + "quay";
    }
-    else if (str.substr(0,3) === "squ") {
+
+   else if (str.substr(0,3) === "squ") {
      str = str.replace("squ", '');
-     return str = str + "squay";
+     str = str + "squay";
    }
+
     else {
       str = str.split("")
       while (str[0].match(/[b-df-hj-np-tv-z]/)) {
@@ -17,10 +25,28 @@ var pigLatin = function(str) {
       }
       str = str.join("");
       str = str + "ay"
-      return str
     };
+    finalArray.push(str);
+  });
+  var result = finalArray.join(" ");
+    console.log(result)
+  return result;
  };
 
+$(document).ready(function(event) {
+  $(".piggyForm").submit(function() {
+    var phrase = $("#inputForm").val();
+    var result = pigLatin(phrase);
+
+    $(".translation").text(result);
+
+$(".translation-box").show();
+(event).preventDefault();
+  });
+
+});
+
+ // var input = prompt("Lay some eloquence on me");
 
 
    //
