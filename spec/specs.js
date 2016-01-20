@@ -17,6 +17,10 @@ describe("pigLatin", function() {
     expect(pigLatin("three")).to.equal("eethray");
   });
 
+  it("takes in mulitiple words and translates them all into Pig Latin", function () {
+    expect(pigLatin("hello there")).to.equal("ellohay erethay")
+  });
+
 
 
 
