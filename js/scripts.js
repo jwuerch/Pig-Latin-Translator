@@ -2,7 +2,7 @@ var pigLatin = function(word) {
   var array = word.split(" ");
   var finalArray = [];
   array.forEach(function(str) {
-
+   str = str.toLowerCase();
    if (str[0].match(/[aeiou]/)) {
      str = str + "ay";
    }
@@ -33,15 +33,15 @@ var pigLatin = function(word) {
   return result;
  };
 
-$(document).ready(function(event) {
-  $(".piggyForm").submit(function() {
+$(document).ready(function() {
+  $(".piggyForm").submit(function(event) {
     var phrase = $("#inputForm").val();
     var result = pigLatin(phrase);
 
     $(".translation").text(result);
 
-$(".translation-box").show();
-(event).preventDefault();
+
+    (event).preventDefault();
   });
 
 });
