@@ -6,10 +6,12 @@
 This page will convert your thoughtful and eloquent input into very childish Pig Latin.
 
 ##Instructions
-artstay ypingtay
+* Clone this repository.
+* Open 'index.html.'
+* Type in a word or phrase to translate into Pig Latin.
 
 ###Technologies used include:
-HTML, CSS, JavaScript, jQuery, Bootstrap, head-scratching, and our wonderful Epicodus teachers.
+HTML, CSS, JavaScript, jQuery, Bootstrap
 
 ##License
-This project is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+This project was created by Jason Wuerch and Wade Grubbs. Please ask permission to use.
